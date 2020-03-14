@@ -1,0 +1,18 @@
+<div [style.width]="'200px'">
+  <mat-label>Set your color:</mat-label>
+    <input #firstInput
+           [style.width]="'200px'" type="text" placeholder="Input color name..."
+           [(ngModel)]="colorName1"
+           (keyup.enter)="onClick(colorName1)"
+    >
+  <mat-label>Set next color</mat-label>
+
+  <input #secondInput
+         [style.width]="'200px'" type="text" placeholder="Input color name..."
+         [(ngModel)]="colorName2"
+         (keyup.enter)="onClick(colorName2)"
+  >
+  <br />
+  <ng-content></ng-content>
+
+</div>

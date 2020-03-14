@@ -1,0 +1,26 @@
+<app-src1 (color)="onRec1($event)" #src1Component>
+  <small>You color is <strong>{{ background }}</strong></small>
+</app-src1>
+
+<div *ngIf="background.length != 0; else empty"
+  [ngStyle]="{
+  'width': '200px',
+  'height': '200px',
+  'background-color': background
+  }"
+></div>
+  <ng-template #empty>
+    <div [ngStyle]="{
+  'width': '200px',
+  'height': '200px',
+  'border': 'grey dashed 0.5px',
+  'text-align': 'center'
+  }"
+    >
+      <small>your color will be shown here</small>
+    </div>
+  </ng-template>
+<button
+  mat-raised-button color="primary"
+  (click)="onClear()"
+  [style.margin-top]="'10px'">CLEAR ALL</button>

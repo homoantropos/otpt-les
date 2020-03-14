@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'otpt-les';
+  receipt = '';
+  receive(source: string): void {
+    this.receipt = `${source}`;
+    this.receipt = 'RED';
+    console.log(source);
+  }
 }
